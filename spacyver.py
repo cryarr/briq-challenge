@@ -9,6 +9,9 @@ random.random()
 nlp = spacy.load("en_core_web_lg")
 print("Loaded NLP")
 
+
+##loads all quotes into a json object, extracts the quote only so it can be appended to a list
+## that way we can easily iterate over the quotes
 def getQuotes():
     page = urllib.request.urlopen('https://programming-quotes-api.herokuapp.com/quotes')
     data = json.load(page)
@@ -18,7 +21,9 @@ def getQuotes():
         
     return datalist
 
-
+#random quote analysis with the nlp package from spacy
+## prints the quote with the highest similarity value to the selected random quote
+## uses nlp tokenizer to get the words into vectors and compare the similarity with similarity() 
 def randomQuoteAnalysis(quotelist):
     num = random.randrange(len(quotelist))
     randQuote = quotelist[num]
@@ -45,6 +50,5 @@ def randomQuoteAnalysis(quotelist):
 
 
 ####main
-
 quotelist = getQuotes()
 randomQuoteAnalysis(quotelist)
