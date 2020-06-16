@@ -52,3 +52,8 @@
     - What is the NLP problem of matching string similarity. What is the math behind it, because lots of the distance functions don’t seem to account for sentiment. 
         - I think maybe another way to cache sentiment for specific words might be to match words that have 
 
+
+# 5th iteration
+- quick flask implementation, was purely for exploration to see if something like this would work. 
+- its very ugly but it works. The only problem is that when the form submits it doesn't post back a true value for the form submission
+- otherwise this implementation works. 
