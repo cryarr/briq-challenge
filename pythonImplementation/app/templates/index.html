@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<title>Quick flask implementation</title>
+	</head>
+	<body>
+		<p>Your {{randorSim}} quote is: </p>
+		<p>{{quote}}</p>
+		<form action="" method="post" novalidate>
+		<p>
+			{{form.rating.label}} <br>
+			{{form.rating(size=32)}}
+		</p>
+		<p>{{ form.submit() }}</p>
+		</form>
+	</body>
+
+</html>
